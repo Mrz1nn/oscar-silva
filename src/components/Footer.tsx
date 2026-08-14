@@ -22,12 +22,6 @@ export function Footer() {
 
           <div className="flex flex-col gap-2 sm:items-end">
             <a
-              href="/links"
-              className="text-sm font-medium tracking-wide text-gold-soft transition-colors hover:text-paper"
-            >
-              Todos os links →
-            </a>
-            <a
               href="#contato"
               className="text-sm font-medium tracking-wide text-paper/70 transition-colors hover:text-paper"
             >

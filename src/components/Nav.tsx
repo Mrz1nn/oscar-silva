@@ -98,13 +98,16 @@ export function Nav() {
             : "bg-transparent"
         )}
       >
-        <nav className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-3 sm:px-8 lg:px-12">
+        <nav
+          className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-3 sm:px-8 lg:px-12"
+          style={{ paddingTop: "calc(0.75rem + env(safe-area-inset-top))" }}
+        >
           <a
             href={isHome ? "#topo" : "/"}
             onClick={handleLinkClick}
             className="flex items-center gap-3"
           >
-            <span className="relative h-9 w-[130px] shrink-0 sm:h-10 sm:w-[145px]">
+            <span className="relative h-10 w-[140px] shrink-0 sm:h-10 sm:w-[145px]">
               <Image
                 src={scrolled || open ? "/images/logo-navy.png" : "/images/logo-white.png"}
                 alt="Oscar Silva"
