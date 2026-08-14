@@ -150,8 +150,8 @@ export const chapa = {
     {
       name: "João Terra",
       region: "Distrito Federal",
-      photo: undefined as string | undefined,
-      instagram: undefined as string | undefined,
+      photo: "/images/joao-terra.jpg",
+      instagram: "joaoterradf",
     },
     {
       name: "Daniela Ciriaco",
