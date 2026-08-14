@@ -207,7 +207,7 @@ export const recognition = {
 
 export const contact = {
   intro:
-    "Quer ajudar a campanha, sugerir uma pauta ou levar uma demanda da sua região? Deixe sua mensagem.",
+    "Quer ajudar a campanha, sugerir uma pauta ou levar uma demanda da sua região? Chama direto no WhatsApp.",
 };
 
 export const privacy = {
