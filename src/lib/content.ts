@@ -129,10 +129,48 @@ export const chapa = {
   intro:
     "Oscar não caminha sozinho. Ao lado dele, uma chapa de candidatos a deputado distrital cobre as regiões administrativas que hoje pedem mais representação.",
   candidates: [
-    { name: "Anderson Vieira", region: "Ceilândia", photo: "/images/anderson-vieira.jpg" },
-    { name: "Luciana", region: "Taguatinga", photo: undefined as string | undefined },
-    { name: "Adalberto", region: "Riacho Fundo", photo: undefined as string | undefined },
-    { name: "João Terra", region: "Distrito Federal", photo: undefined as string | undefined },
+    {
+      name: "Anderson Vieira",
+      region: "Ceilândia",
+      photo: "/images/anderson-vieira.jpg",
+      instagram: undefined as string | undefined,
+    },
+    {
+      name: "Luciana Lima",
+      region: "Taguatinga",
+      photo: "/images/luciana-lima.jpg",
+      instagram: "lucianalimaoficialdf",
+    },
+    {
+      name: "Adalberto Carvalho",
+      region: "Riacho Fundo",
+      photo: "/images/adalberto-carvalho.jpg",
+      instagram: "sgtadalbertocarvalho",
+    },
+    {
+      name: "João Terra",
+      region: "Distrito Federal",
+      photo: undefined as string | undefined,
+      instagram: undefined as string | undefined,
+    },
+    {
+      name: "Daniela Ciriaco",
+      region: "Ceilândia",
+      photo: "/images/daniela-ciriaco.jpg",
+      instagram: "danielaciriacooficial",
+    },
+    {
+      name: "Maria José Barbosa Liandro",
+      region: "Distrito Federal",
+      photo: "/images/maria-jose-liandro.jpg",
+      instagram: "mariajosebarbosaliando",
+    },
+    {
+      name: "Fátima Godoi",
+      region: "Distrito Federal",
+      photo: "/images/fatima-godoi.jpg",
+      instagram: "prof.fatimagodoi",
+    },
   ],
 };
 

@@ -100,36 +100,52 @@ export function AvancaDF() {
         </Reveal>
 
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {chapa.candidates.map((c, i) => (
-            <Reveal key={c.name} delay={0.08 + i * 0.08}>
-              <div className="overflow-hidden rounded-xl border border-paper/15 bg-paper/[0.04] transition-colors hover:border-gold-soft/50">
-                <div className="relative aspect-square w-full overflow-hidden bg-paper/[0.06]">
-                  {c.photo ? (
-                    <Image
-                      src={c.photo}
-                      alt={c.name}
-                      fill
-                      sizes="(min-width: 1024px) 24vw, 50vw"
-                      className="object-cover"
-                    />
-                  ) : (
-                    <span className="flex h-full w-full items-center justify-center font-display text-4xl font-extrabold text-paper/25">
-                      {c.name.charAt(0)}
+          {chapa.candidates.map((c, i) => {
+            const Wrapper = c.instagram ? "a" : "div";
+            const wrapperProps = c.instagram
+              ? {
+                  href: `https://instagram.com/${c.instagram}`,
+                  target: "_blank",
+                  rel: "noreferrer",
+                }
+              : {};
+
+            return (
+              <Reveal key={c.name} delay={0.08 + i * 0.06}>
+                <Wrapper
+                  {...wrapperProps}
+                  className="group block overflow-hidden rounded-xl border border-paper/15 bg-paper/[0.04] transition-colors hover:border-gold-soft/50"
+                >
+                  <div className="relative aspect-square w-full overflow-hidden bg-paper/[0.06]">
+                    {c.photo ? (
+                      <Image
+                        src={c.photo}
+                        alt={c.name}
+                        fill
+                        sizes="(min-width: 1024px) 24vw, 50vw"
+                        className="object-cover"
+                      />
+                    ) : (
+                      <span className="flex h-full w-full items-center justify-center font-display text-4xl font-extrabold text-paper/25">
+                        {c.name.charAt(0)}
+                      </span>
+                    )}
+                  </div>
+                  <div className="p-6">
+                    <span className="text-xs font-bold uppercase tracking-[0.15em] text-gold-soft">
+                      {c.region}
                     </span>
-                  )}
-                </div>
-                <div className="p-6">
-                  <span className="text-xs font-bold uppercase tracking-[0.15em] text-gold-soft">
-                    {c.region}
-                  </span>
-                  <p className="mt-2 font-display text-xl font-bold">{c.name}</p>
-                  <p className="mt-1 text-xs text-paper/55">
-                    Candidato(a) a Deputado(a) Distrital
-                  </p>
-                </div>
-              </div>
-            </Reveal>
-          ))}
+                    <p className="mt-2 font-display text-xl font-bold">{c.name}</p>
+                    <p className="mt-1 text-xs text-paper/55">
+                      {c.instagram
+                        ? `@${c.instagram}`
+                        : "Candidato(a) a Deputado(a) Distrital"}
+                    </p>
+                  </div>
+                </Wrapper>
+              </Reveal>
+            );
+          })}
         </div>
       </Container>
     </section>
